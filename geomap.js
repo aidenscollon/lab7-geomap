@@ -15,18 +15,18 @@
    // If your map is clipped or off-center, adjust scale and translate.
 
 
-   var path = d3.geoPath(projection);
+    var path = d3.geoPath(projection);
     const svg = d3.select("#geomap").append('g').attr('transform', 'translate(50,50)');
 
 
-   svg.append("g")
-   .selectAll("path")
-   .data(topo.features)
-   .join("path")
-     .attr("d", path)
-     .attr("fill", 'whitesmoke')
-     .attr("stroke", "black")
-     .attr("stroke-width", "1px");
+    svg.append("g")
+    .selectAll("path")
+    .data(topo.features)
+    .join("path")
+        .attr("d", path)
+        .attr("fill", 'whitesmoke')
+        .attr("stroke", "black")
+        .attr("stroke-width", "1px");
 
 
  })
